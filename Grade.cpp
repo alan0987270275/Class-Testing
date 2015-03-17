@@ -2,9 +2,8 @@
 #include"Grade.h"
 using namespace std;
 
-GradeCalculate::GradeCalculate()
-{
-	cout << _counter << endl;
+GradeCalculate::GradeCalculate()//Consturcter
+{  //Initialize the array
 	for(int i = 0; i < _counter;i++ )
 	{
 		_grade[i] = 0.0;
@@ -12,30 +11,30 @@ GradeCalculate::GradeCalculate()
 	}
 }
 
-GradeCalculate::~GradeCalculate()
+GradeCalculate::~GradeCalculate()//Destructer
 {
 	cout << "All array were deleted!!" << endl;
 	delete[]_grade;
 	delete[]_credit;
 }
 
-void GradeCalculate::GetCounter()
+void GradeCalculate::GetCounter()//The fuction for user to input the data
 {
-	int counter;
+	int counter;//Get the amount of course to put into the array
 	cout << "Please enter how many course you have:" << endl;
 	cin >> counter;
-	SetCounter(counter);
+	SetCounter(counter);//The function for seting the data
 }
 
-void GradeCalculate::SetCounter(int counter)
-{
-	_counter = counter;
+void GradeCalculate::SetCounter(int counter)//The function for seting the data
+{  //using Dynamical Memory Allocation
+	_counter = counter; 
 	_grade = new double[_counter];
 	_credit = new int[_counter];
 }
 
-void GradeCalculate::GetScoreCredit()
-{
+void GradeCalculate::GetScoreCredit()//The fuction for user to input the data
+{	//user intput data
 	int credit;
 	double score;
 	for (int i = 0; i < _counter;i++)
@@ -49,7 +48,7 @@ void GradeCalculate::GetScoreCredit()
 	}
 }
 
-void GradeCalculate::Print()
+void GradeCalculate::Print()//Print out the result
 {
 	cout << "Your averge score is: " << AvergeScore()<<endl;
 }
@@ -61,9 +60,9 @@ double GradeCalculate::AvergeScore()
 
 	for (int i = 0; i < _counter;i++)
 	{
-		total += (_grade[i]*_credit[i]);
-		creditrtotal += _credit[i];
+		total += (_grade[i]*_credit[i]);//Calculate the total of score
+		creditrtotal += _credit[i];//Calculate the total of credit
 	}
 
-	return (total / creditrtotal);
+	return (total / creditrtotal);// return the average
 }

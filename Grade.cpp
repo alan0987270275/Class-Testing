@@ -4,6 +4,7 @@ using namespace std;
 
 GradeCalculate::GradeCalculate()//Consturcter
 {  //Initialize the array
+	cout << "Create object";
 	for(int i = 0; i < _counter;i++ )
 	{
 		_grade[i] = 0.0;

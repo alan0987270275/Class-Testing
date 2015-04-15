@@ -17,5 +17,7 @@ private:
 	double *_grade;//The data of user's score by using pointer 
 	int *_credit;//The dara of user's credit by using pointer 
 	double AvergeScore();// The function to calculate the average
+
+
 };
 #endif

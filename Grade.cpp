@@ -10,6 +10,8 @@ GradeCalculate::GradeCalculate()//Consturcter
 		_grade[i] = 0.0;
 		_credit[i] = 0;
 	}
+
+
 }
 
 GradeCalculate::~GradeCalculate()//Destructer

@@ -10,6 +10,9 @@ public:
 	void SetCounter(int counter=0);//The function for seting the data
 	void GetScoreCredit();//The fuction for user to input the data
 	void Print();//Print out the result
+
+
+
 	
 
 private:

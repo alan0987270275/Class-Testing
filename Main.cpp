@@ -8,7 +8,7 @@ int main()
 	G.GetCounter();//The fuction for user to input the data
 	G.GetScoreCredit();//The fuction for user to input the data
 	G.Print();//Print out the result
-	cout << "sfashflsaihfoi" << endl;
+	cout << "sfashflsaihfoisdfsfsdfasdfasdf" << endl;
 	system("pause");
 	return 0;
 }
